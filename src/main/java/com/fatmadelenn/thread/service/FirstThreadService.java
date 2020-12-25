@@ -17,7 +17,9 @@ public class FirstThreadService {
 //        firstThread.start(); // Causes this thread to begin execution
 //        firstThread.join(); // Waits for this thread to die.
         Thread firstThreadRunnable = new Thread(new FirstThreadRunnable("FirstThread executed using Thread"));
+        logger.info("Thread state: " +firstThreadRunnable.getState());
         firstThreadRunnable.start();
+        logger.info("Thread state: " +firstThreadRunnable.getState());
         firstThreadRunnable.join();
     }
 
